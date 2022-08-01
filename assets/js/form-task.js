@@ -1,15 +1,14 @@
-var btnAdiciona = document.querySelector("#adicionar");
-btnAdiciona.addEventListener("click", function (event) {
-    event.preventDefault();
+const inputTask = document.querySelector(".input-task");
+const btnAdd = document.querySelector(".add-task");
+const tasklistTable = document.querySelector(".tasklist__table");
 
-    var valorForm = document.querySelector(".form-task");
-    var task = valorForm.task.value;
-    console.log(task);
+const taskTd = document.createElement("td");
 
-    var valorFormTaskList = document.querySelector(".form-task-list");
-    console.log(valorFormTaskList);
-    var valorTaskList = valorFormTaskList.querySelector(".tasklist");
-    console.log(valorTaskList);
+const task = document.createElement("p");
+task.textContent = inputTask.value;
 
-    valorFormTaskList.textContent = task;
-});
+const deleteTask = document.createElement("button");
+
+taskTd.appendChild(task);
+taskTd.appendChild(deleteTask);
+tasklistTable.appendChild(taskTd);
