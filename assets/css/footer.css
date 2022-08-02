@@ -1,0 +1,14 @@
+@import url(_reset.css);
+@import url(_style.css);
+
+footer {
+    background-color: var(--preto);
+    height: 100px;
+    text-align: center;
+    text-shadow: .1rem .1rem #333;
+}
+
+footer p {
+    color: whitesmoke;
+    margin: 2.5rem 0;
+}

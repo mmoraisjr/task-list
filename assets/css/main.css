@@ -1,0 +1,94 @@
+button:hover {
+    cursor: pointer;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    margin: .5rem;
+
+}
+
+input {
+    border: none;
+    border-radius: 50px;
+    height: 2rem;
+    padding: 0 1rem;
+    width: 13rem;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+main {
+    background: var(--azul2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    margin: 10rem auto;
+}
+
+.add-task {
+    background-color: var(--verde);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: .1rem .1rem #333;
+}
+
+.buttons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.complete-task {
+    background: var(--verde);
+    width: 15px;
+    height: 15px;
+}
+
+.delete-task {
+    background-color: var(--vermelho);
+    width: 15px;
+    height: 15px;
+}
+
+.task-completed {
+    text-decoration: line-through;
+
+}
+
+.tasklist {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 350px;
+}
+
+.tasklist__container {
+    width: 99%;
+}
+
+.task-item {
+    align-items: center;
+    background-color: var(--branco);
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .25rem;
+    padding: 1rem;
+}

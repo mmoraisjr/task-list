@@ -21,16 +21,22 @@ const addTask = () => {
   if (!inputValido) {
     return inputTask.classList.add("erro");
   }
-  //cria um elemento HTMl div 
+
+  //cria um elemento HTML div
   const taskItem = document.createElement("div");
   //insere uma classe ao elemento div criado
   taskItem.classList.add("task-item");
 
-  //cria um elemento HTMl p
+  //cria um elemento HTML p
   const task = document.createElement("p");
   //recebe o valor inputado no campo inputTask e insere no elemento p criado
   task.innerText = inputTask.value;
-  
+
+  //cria um elemento HTML div
+  const buttons = document.createElement("div");
+  //insere uma classe ao elemento div criado
+  buttons.classList.add("buttons");
+
   //cria um elemento HTMl button
   const completeTaskBtn = document.createElement("button");
   //insere uma classe ao elemento button criado
@@ -47,17 +53,16 @@ const addTask = () => {
 
   //insere como elemento filho dentro do elemento pau informado, ou seja, task, completeTaskBtn e deleteTaskBtn sendo filhos de taskItem
   taskItem.appendChild(task);
-  taskItem.appendChild(completeTaskBtn)
-  taskItem.appendChild(deleteTaskBtn);
+  buttons.appendChild(completeTaskBtn);
+  buttons.appendChild(deleteTaskBtn);
+  taskItem.appendChild(buttons);
   //insere como elemento filho dentro do elemento pai informado, ou seja, taskItem sendo filhos de tasklistContainer
   tasklistContainer.appendChild(taskItem);
 
   //"limpa" o conteúdo inserido no campo input
   inputTask.value = "";
-  
-  const tasks = tasklistContainer.childNodes;
-  console.log(tasks.length);
 
+  const tasks = tasklistContainer.childNodes;
 };
 
 //função de mudar o campo input task, removendo a class do campo que servia como alerta de campo inválido
@@ -72,19 +77,19 @@ const inputChange = () => {
 const completeTask = (task) => {
   const tasks = tasklistContainer.childNodes;
 
-  for(const t of tasks){
-    if(t.firstChild.isSameNode(task)){
+  for (const t of tasks) {
+    if (t.firstChild.isSameNode(task)) {
       t.firstChild.classList.toggle("task-completed");
     }
   }
-}
+};
 
 const deleteTask = (taskItem, task) => {
   const tasks = tasklistContainer.childNodes;
 
-  for(const t of tasks){
-    if(t.firstChild.isSameNode(task)){
+  for (const t of tasks) {
+    if (t.firstChild.isSameNode(task)) {
       taskItem.remove();
     }
   }
-}
+};
