@@ -47,26 +47,46 @@ main {
 }
 
 .buttons {
-    width: 15%;
     display: flex;
     justify-content: space-between;
+    width: 20%;
+}
+
+.buttons i {
+    align-items: center;
+    color: var(--branco);
+    display: flex ;
+    justify-content: center;
 }
 
 .complete-task {
     background: var(--verde);
-    width: 15px;
-    height: 15px;
+    border: #333 solid .5px;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
 }
 
 .delete-task {
     background-color: var(--vermelho);
-    width: 15px;
-    height: 15px;
+    border: #333 solid .5px;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+.erro {
+    border: red solid 2px;
+}
+
+.erro::placeholder{
+    color: red;
 }
 
 .task-completed {
     text-decoration: line-through;
-
 }
 
 .tasklist {

@@ -38,16 +38,20 @@ const addTask = () => {
   buttons.classList.add("buttons");
 
   //cria um elemento HTMl button
-  const completeTaskBtn = document.createElement("button");
+  const completeTaskBtn = document.createElement("i");
   //insere uma classe ao elemento button criado
   completeTaskBtn.classList.add("complete-task");
+  completeTaskBtn.classList.add("fa-check");
+  completeTaskBtn.classList.add("fa-solid");
   //aguarda um evento de click, para executar a função de completar task
   completeTaskBtn.addEventListener("click", () => completeTask(task));
 
   //cria um elemento HTMl button
-  const deleteTaskBtn = document.createElement("button");
-  //insere uma classe ao elemento button criado
+  const deleteTaskBtn = document.createElement("i");
+  //insere uma classe ao elemento button criado 
   deleteTaskBtn.classList.add("delete-task");
+  deleteTaskBtn.classList.add("fa-trash-can");
+  deleteTaskBtn.classList.add("fa-solid");
   //aguarda um evento de click, para executar a função de deletar task
   deleteTaskBtn.addEventListener("click", () => deleteTask(taskItem, task));
 
